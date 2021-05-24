@@ -1,0 +1,485 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+body {
+
+    overflow: hidden;
+}
+
+header {
+
+    height: 100vh;
+    background-color: rgb(239,232,213);
+    z-index: 0;
+    overflow: hidden;
+}
+.logo_nav_container {
+
+    height: 15vh;
+}
+
+.logo {
+
+    height: 15vh;
+    width: 250px;
+    float: left;
+    position: relative;
+    margin-left:100px;
+}
+
+.logo img {
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+nav {
+
+    width: 550px;
+    height: 15vh;
+    float: right;
+    margin-right:100px;
+}
+
+nav a {
+
+    display: block;
+    height: 15vh;
+    width: 33.3333%;
+    float: left;
+    line-height: 15vh;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    color: rgb(101,180,201);
+    font-size: 14px;
+    position: relative;
+    
+}
+
+nav a span {
+
+    color: rgb(101,180,201);
+    transition: .5s;
+}
+
+nav a:hover span {
+
+    color: rgb(101,167,104);
+
+}
+
+
+nav a i {
+
+    position: absolute;
+    left:20%;
+    bottom: 50%;
+    color: rgb(101,167,104);
+    transition:bottom 0.4s, left 1.5s, transform 1.5s ;
+    font-size: 24px;
+    transform: rotate(0deg);
+    transform-origin:-30%;
+    transition-timing-function: ease-out;
+    opacity: 0;
+    
+}
+
+nav a:hover i {
+
+    bottom :65%;
+    left: 90%;
+    transform: rotate(650deg);
+    animation-name: lisc;
+    animation-duration: 1.5s;
+    
+}
+
+@keyframes lisc {
+    0%   {opacity:0}
+    30%  {opacity:1 }
+    80%  {opacity:1}
+    100% {opacity:0 }
+
+}
+
+.motto {
+
+    font-family: 'Shrikhand', cursive;
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.motto h1 {
+
+    font-size: 90px;
+    font-weight: normal;
+    line-height: 95px;
+}
+
+.motto h2 {
+
+    font-size: 36px;
+    color: rgb(101,167,104);
+    font-weight: normal;
+    padding-top: 15px;
+}
+
+.motto button {
+
+    position: relative;
+    display: block;
+    margin: 50px auto 0 auto;
+    padding: 15px 40px;
+    border:rgb(101,180,201) 4px solid;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: rgb(101,180,201);
+    cursor: pointer;
+    transition: .2s;
+    z-index: 3;
+
+    
+}
+
+
+
+
+
+.mountains {
+
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.motto button:hover {
+
+    color: white;
+    background-color:rgb(101,167,104) ;
+    border-color: rgb(101,167,104);
+}
+
+.listek1 {
+
+    height: 70px;
+    position: absolute;
+    left:46%;
+    bottom:0%;
+    transition: bottom .2s .2s;
+    z-index: 2;
+
+}
+
+.motto button:hover ~ .listek1 {
+
+    bottom:13.5%;
+    animation-name: listek1animation;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:bottom
+}
+
+@keyframes listek1animation {
+
+    0%   {transform:rotate(0deg)}
+    100%  {transform:rotate(10deg)}
+}
+
+
+.listek2 {
+
+    height: 70px;
+    position: absolute;
+    left:50%;
+    bottom:0%;
+    transition: left .2s .2s;
+    z-index: 2;
+
+}
+
+.motto button:hover ~ .listek2 {
+
+    left:60%;
+    animation-name: listek2animation;
+    animation-duration: 0.75s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:left;
+
+}
+
+@keyframes listek2animation {
+
+    0%   {transform:rotate(0deg)}
+    100%  {transform:rotate(5deg)}
+}
+
+.listek3 {
+
+    height: 70px;
+    position: absolute;
+    left:53%;
+    bottom:0%;
+    transition: bottom .2s .2s;
+    z-index: 2;
+
+}
+
+.motto button:hover ~ .listek3 {
+
+    bottom:10.5%;
+    animation-name: listek2animation;
+    animation-duration: 0.75s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:bottom;
+ 
+
+}
+
+.listek4 {
+
+    height: 70px;
+    position: absolute;
+    left:38%;
+    bottom:0%;
+    transition: bottom .2s .2s;
+    z-index: 2;
+
+}
+
+.motto button:hover ~ .listek4 {
+
+    bottom:13%;
+    animation-name: listek2animation;
+    animation-duration: 0.75s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:bottom;
+ 
+
+}
+
+.listek5 {
+
+    height: 70px;
+    position: absolute;
+    left:35%;
+    bottom:0%;
+    transition: bottom .2s .2s, left .2s .2s;
+    z-index: 2;
+    transform:scaleX(-1) rotate(90deg);
+
+}
+
+.motto button:hover ~ .listek5 {
+
+    bottom:7%;
+    left:32%;
+
+
+ 
+
+}
+
+.listek6 {
+
+    height: 70px;
+    position: absolute;
+    left:36%;
+    bottom:-3%;
+    transition: left .2s .2s, bottom .2s .2s;
+    z-index: 2;
+    
+
+}
+
+.motto button:hover ~ .listek6 {
+
+    
+    left:28%;
+    animation-name: listek2animation;
+    animation-duration: 0.75s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:right;
+
+
+
+}
+
+.listek7 {
+
+    height: 35px;
+    position: absolute;
+    left:40%;
+    bottom:1%;
+    transition: left .2s .2s, bottom .2s .2s;
+    z-index: 2;
+    
+
+}
+
+.motto button:hover ~ .listek7 {
+
+    
+    left:60%;
+    bottom:-9%;
+    animation-name: listek2animation;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:left;
+
+
+
+}
+
+.listek8 {
+
+    height: 100px;
+    position: absolute;
+    left:40%;
+    bottom:-3%;
+    transition: left .2s .2s, bottom .2s .2s;
+    z-index: 2;
+    
+
+}
+
+.motto button:hover ~ .listek8 {
+
+    
+    left:40%;
+    bottom:-18%;
+    animation-name: listek2animation;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:top;
+
+
+
+}
+
+.listek9 {
+
+    height: 80px;
+    position: absolute;
+    left:40%;
+    bottom:-3%;
+    transition: left .2s .2s, bottom .2s .2s;
+    z-index: 2;
+    
+
+}
+
+.motto button:hover ~ .listek9 {
+
+    
+    left:36%;
+    bottom:-15%;
+    animation-name: listek2animation;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:top;
+
+
+
+}
+
+.listek10 {
+
+    height: 80px;
+    position: absolute;
+    left:49%;
+    bottom:-3%;
+    transition: left .2s .2s, bottom .2s .2s;
+    z-index: 2;
+    
+
+}
+
+.motto button:hover ~ .listek10 {
+
+    
+    left:49%;
+    bottom:-17%;
+    animation-name: listek2animation;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    transform-origin:top;
+
+
+
+}
+
+.cloud {
+
+    position: absolute;
+    width: 150px;
+    left:-10%;
+    bottom: 19%;
+    z-index: 1;
+    animation-name: ruchchmury;
+    animation-iteration-count:infinite;
+    animation-duration: 70s;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes ruchchmury {
+
+    0%   {left:-10%}
+    100%  {left:110%}
+    
+}
+
+.birds {
+
+
+    position: absolute;
+    width: 150px;
+    left:-10%;
+    bottom: 14%;
+    z-index: 1;
+    animation-name: ruchchmury;
+    animation-iteration-count:infinite;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    width: 200px;
+    height: 200px;
+    transform:scaleX(-1);
+    z-index: 1;
+
+
+}
